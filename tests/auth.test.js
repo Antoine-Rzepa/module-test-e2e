@@ -1,6 +1,5 @@
 const timeout = 15000;
 
-
 // Test des fonctionnalités d'authentification
 describe("Auth features", () => {
 

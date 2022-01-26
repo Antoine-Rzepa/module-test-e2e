@@ -26,7 +26,8 @@ describe("Tests basiques", () => {
 
         // ouvrir un onglet dans le navigateur
         page = await global.__BROWSER__.newPage()
-        
+
     }, timeout)
 
 });
+

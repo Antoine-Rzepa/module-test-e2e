@@ -1,5 +1,6 @@
 const timeout = 15000;
 
+
 // Test des fonctionnalités d'authentification
 describe("Auth features", () => {
 
@@ -43,7 +44,7 @@ describe("Auth features", () => {
 
         // ouvrir un onglet dans le navigateur
         page = await global.__BROWSER__.newPage()
-        
+
     }, timeout)
 
 });

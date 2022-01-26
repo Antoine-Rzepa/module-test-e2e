@@ -3,6 +3,11 @@
 
 name: Node.js CI
 
+env:
+  TESTED_WEBSITE: ${{ secrets.TESTED_WEBSITE }}
+  TEST_LOGIN: ${{ secrets.TEST_LOGIN }}
+  TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
+
 on:
   push:
     branches: [ master ]

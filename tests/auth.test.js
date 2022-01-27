@@ -7,10 +7,9 @@ describe("Auth features", () => {
 
     test('login and logout', async () => {
 
-        console.log(process.env.TESTED_WEBSITE)
-        console.log(process.env.TEST_LOGIN)
-        console.log(process.env.TEST_PASSWORD)
-        await page.goto(process.env.TESTED_WEBSITE);
+        console.log(util.inspect(process.env.TESTED_WEBSITE))
+        console.log(util.inspect(process.env.TEST_PASSWORD))
+        console.log(util.inspect(process.env.TESTED_WEBSITE))
         await page.waitForSelector('#login_button_container');
         await page.type('#user-name', process.env.TEST_LOGIN);
         await page.type('#password', process.env.TEST_PASSWORD);

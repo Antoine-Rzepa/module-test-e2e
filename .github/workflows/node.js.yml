@@ -3,11 +3,6 @@
 
 name: Node.js CI
 
-env:
-  TESTED_WEBSITE: ${{ secrets.TESTED_WEBSITE }}
-  TEST_LOGIN: ${{ secrets.TEST_LOGIN }}
-  TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
-
 on:
   push:
     branches: [ master ]
@@ -15,16 +10,6 @@ on:
     branches: [ master ]
 
 jobs:
-
-  check-var:
-
-    runs-on: ubuntu-latest
-
-    script:
-      echo ${{ secrets.TESTED_WEBSITE }}
-      echo ${{ env.TESTED_WEBSITE }}
-      echo ${{ env.TEST_LOGIN }}
-      echo ${{ env.TEST_PASSWORD }}
 
   build:
     
@@ -45,3 +30,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+      env:
+        TESTED_WEBSITE: ${{ secrets.TESTED_WEBSITE }}
+        TEST_LOGIN: ${{ secrets.TEST_LOGIN }}
+        TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}

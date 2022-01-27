@@ -30,7 +30,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-      env:
-        TESTED_WEBSITE: ${{ secrets.TESTED_WEBSITE }}
-        TEST_LOGIN: ${{ secrets.TEST_LOGIN }}
-        TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
+        env:
+          TESTED_WEBSITE: ${{ secrets.TESTED_WEBSITE }}
+          TEST_LOGIN: ${{ secrets.TEST_LOGIN }}
+          TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}

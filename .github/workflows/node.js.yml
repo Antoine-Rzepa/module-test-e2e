@@ -8,12 +8,6 @@ env:
   TEST_LOGIN: ${{ secrets.TEST_LOGIN }}
   TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
 
-script:
-  echo ${{ secrets.TESTED_WEBSITE }}
-  echo ${{ env.TESTED_WEBSITE }}
-  echo ${{ env.TEST_LOGIN }}
-  echo ${{ env.TEST_PASSWORD }}
-
 on:
   push:
     branches: [ master ]
@@ -21,6 +15,17 @@ on:
     branches: [ master ]
 
 jobs:
+
+  check-var:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      echo ${{ secrets.TESTED_WEBSITE }}
+      echo ${{ env.TESTED_WEBSITE }}
+      echo ${{ env.TEST_LOGIN }}
+      echo ${{ env.TEST_PASSWORD }}
+
   build:
     
     runs-on: ubuntu-latest

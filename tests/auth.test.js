@@ -1,4 +1,5 @@
 const timeout = 15000;
+const util = require('util')
 
 // Test des fonctionnalités d'authentification
 describe("Auth features", () => {

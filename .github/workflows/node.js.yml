@@ -17,6 +17,11 @@ on:
 jobs:
   build:
 
+    echo ${{ secrets.TESTED_WEBSITE }}
+    echo $TESTED_WEBSITE
+    echo $TEST_LOGIN
+    echo $TEST_PASSWORD
+
     runs-on: ubuntu-latest
 
     strategy:

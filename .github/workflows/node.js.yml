@@ -20,7 +20,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
+    script:
       echo ${{ secrets.TESTED_WEBSITE }}
       echo ${{ env.TESTED_WEBSITE }}
       echo ${{ env.TEST_LOGIN }}

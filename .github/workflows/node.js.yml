@@ -17,10 +17,10 @@ on:
 jobs:
   build:
     script:
-      - echo ${{ secrets.TESTED_WEBSITE }}
-      - echo $TESTED_WEBSITE
-      - echo $TEST_LOGIN
-      - echo $TEST_PASSWORD
+      echo ${{ secrets.TESTED_WEBSITE }}
+      echo $TESTED_WEBSITE
+      echo $TEST_LOGIN
+      echo $TEST_PASSWORD
 
     runs-on: ubuntu-latest
 

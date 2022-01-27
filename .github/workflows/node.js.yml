@@ -17,12 +17,6 @@ on:
 jobs:
   build:
     
-    echo ${{ secrets.TESTED_WEBSITE }}
-    echo ${{ env.TESTED_WEBSITE }}
-    echo ${{ env.TEST_LOGIN }}
-    echo ${{ env.TEST_PASSWORD }}
-    
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -31,6 +25,10 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      echo ${{ secrets.TESTED_WEBSITE }}
+      echo ${{ env.TESTED_WEBSITE }}
+      echo ${{ env.TEST_LOGIN }}
+      echo ${{ env.TEST_PASSWORD }}
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2

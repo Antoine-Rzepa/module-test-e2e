@@ -1,5 +1,4 @@
 const timeout = 15000;
-const util = require('util')
 
 // Test des fonctionnalités d'authentification
 describe("Auth features", () => {
@@ -7,10 +6,6 @@ describe("Auth features", () => {
     let page;
 
     test('login and logout', async () => {
-
-        console.log(util.inspect(process.env.TESTED_WEBSITE))
-        console.log(util.inspect(process.env.TEST_PASSWORD))
-        console.log(util.inspect(process.env.TESTED_WEBSITE))
         await page.waitForSelector('#login_button_container');
         await page.type('#user-name', process.env.TEST_LOGIN);
         await page.type('#password', process.env.TEST_PASSWORD);
